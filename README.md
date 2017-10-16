@@ -7,6 +7,6 @@ If you have an ASP.NET Core 2.0 app that is running under IIS and you have it se
 
 `<aspNetCore processPath="bin\IISSupport\VSIISExeLauncher.exe" arguments="-argFile IISExeLauncherArgs.txt" forwardWindowsAuthToken="false" stdoutLogEnabled="false" />`
 
-When you publish the app, the processPath will auto-magically be changed to the app's exe, while the arguments attribute will remain. This will cause an issue and your app will fail to start, giving you a 502.5 error.
+When you publish the app, the `processPath` will auto-magically be changed to the app's exe, while the `arguments` attribute will remain. This will cause an issue and your app will fail to start, giving you a 502.5 error.
 
 The workaround involved removing the arguments variable post web.config transformation during publish. See csproj file for the kick-off of the task, and the gulpfile that's doing the removal.
